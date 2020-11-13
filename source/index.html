@@ -9,7 +9,7 @@
 <body class="page">
   <header class="page__header header">
     <div class="header__header-container">
-      <a class="header__logo-link header__logo-container" href="" aria-label="Логотип сайта">
+      <a class="header__logo-link header__logo-container" aria-label="Логотип сайта">
         <!-- временные логотипы, будут заменены на адаптивные -->
         <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38" alt="Логотип в виде кота">
         <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Логотип-наименование">
@@ -18,7 +18,7 @@
         <nav class="header__navigation navigation popup visually-hidden">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="">Главная</a>
+              <a class="navigation__link">Главная</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="catalog.html">Каталог продукции</a>
@@ -28,8 +28,8 @@
             </li>
           </ul>
         </nav>
-        <button class="navigation__burger" aria-label="Кнопка раскрытия меню"></button>
-        <button class="navigation__cross visually_hidden" aria-label="Кнопка закрытия меню"></button>
+        <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+
       </div> <!-- конец контейнера навигации -->
     </div> <!-- конец центровщика шапки -->
   </header>
@@ -40,7 +40,7 @@
 
       <h1 class="page__main-title">Функциональное<br> питание для котов</h1>
       <p class="page__slogan">Занялся собой? Займись котом!</p>
-      <a class="page__program-link" href="">Подобрать программу</a>
+      <a class="page__program-link" href="form.html">Подобрать программу</a>
 
       <section class="page__programs programs">
         <h2 class="visually-hidden">Программы диеты</h2>
@@ -48,12 +48,12 @@
         <article class="programs__slim-program">
           <h3 class="programs__title">Похудение</h3>
           <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programs__link" href="">Каталог slim</a>
+          <a class="programs__link" href="catalog.html">Каталог slim</a>
         </article>
         <article class="programs__pro-program">
           <h3 class="programs__title">Набор массы</h3>
           <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs__link" href="">Каталог pro</a>
+          <a class="programs__link" href="catalog.html">Каталог pro</a>
         </article>
       </section>
 
@@ -92,7 +92,8 @@
         <p class="story__result">Затраты на питание: <span class="story__result-nomber">15 000 РУБ.</span></p>
       </div> <!-- конец блока калькуляции -->
       <div class="story__presentation presentation">
-        <img class="presetation__pic--before" src="http://placehold.it/311x232" width="311" height="232" alt="Кот-жиробас с разноцветными глазами до диеты.">
+        <img class="presentation__pic presentation__pic--before" src="http://placehold.it/311x232" width="311" height="232" alt="Кот-жиробас с разноцветными глазами до диеты.">
+        <!-- подразумевается, что появится картинка-модификатор на таблете и десктопе -->
         <div class="presentation__scale-container">
           <p class="presentation__note">было</p>
           <div class="presentation__scale">
@@ -128,25 +129,25 @@
       </div> <!-- конец контейнкра с картой -->
     </section>
     <div class="footer__nonstrech-footer-container">
-      <a class="footer__logo" href="">
-        <img class="header__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип-наименование">
+      <a class="footer__logo">
+        <img class="footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип-наименование">
       </a>
       <div class="footer__social">
         <ul class="footer__social-list">
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" aria-label="Мы вконтакте"></a>
+            <a class="footer__social-link" href="#" aria-label="Мы вконтакте"></a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" aria-label="Мы в инстаграме"></a>
+            <a class="footer__social-link" href="#" aria-label="Мы в инстаграме"></a>
           </li>
           <li class="footer__social-item">
-            <a class="footer__social-link" href="" aria-label="Мы в фейсбуке"></a>
+            <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке"></a>
           </li>
         </ul>
       </div> <!-- конец блока с ссылками на соцсети -->
       <p class="footer__copy">
         <span class="footer__copy-name">HTML Academy</span>
-        <a class="footer__copy-logo" href="https://htmlacademy.ru" aria-label="Логотип Академии, переход на сайт Академии">
+        <a class="footer__copy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип Академии, переход на сайт Академии">
           <!-- временный тег img, здесь будет svg из спрайта -->
           <img class="footer__copy-pic" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Академии, переход на сайт Академии">
         </a>
