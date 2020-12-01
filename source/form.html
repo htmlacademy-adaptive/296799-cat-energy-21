@@ -47,6 +47,7 @@
     <form class="feedback__form" method="post" action="https://echo.htmlacademy.ru">
 
       <fieldset class="feedback__container cat-data-feedback">
+        <legend class="visually-hidden">Параметры кота</legend>
         <p class="feedback__input-container">
           <label class="cat-data-feedback__field-description" for="name">Имя:<sup>&#9913;</sup>&ensp;</label>
           <input class="cat-data-feedback__field" type="text" id="name" name="surname" placeholder="Барсик" required>
@@ -63,6 +64,7 @@
 
 
       <fieldset class="feedback__container program-feedback">
+        <legend class="visually-hidden">Выбор программы</legend>
         <p class="feedback__input-container">
           <label class="program-feedback__field-description" for="slim" tabindex="0">Похудение</label>
           <input class="program-feedback__field visually-hidden" type="radio" name="program" value="slim" id="slim"
@@ -136,7 +138,7 @@
     </fieldset>
 
     <div class="feedback__submit-wrapper">
-      <button class="feedback__btn primary-link--inner">
+      <button class="feedback__btn primary-link primary-link--inner">
         Отправить заявку
       </button>
       <p class="feedback__note">
