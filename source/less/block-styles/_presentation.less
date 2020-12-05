@@ -1,4 +1,30 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  background-color: aqua;
+
+  @media (min-width: @breakpoint-tablet) {
+    min-height: 620px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    min-height: 656px;
+  }
+}
+
 .presentation__note {
   font-size: @font-size-base;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+  }
+}
+
+.presentation__scale-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: bisque;
 }
