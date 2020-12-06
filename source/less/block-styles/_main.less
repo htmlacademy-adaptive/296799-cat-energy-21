@@ -1,14 +1,57 @@
+.main__nonstrech-sections-container {
+  padding: 0 20px;
+
+  @media (min-width: @breakpoint-tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    padding: 0 110px;
+  }
+}
+
 .main__main-information-container {
   color: @secondary-color;
   background-color: @basic-green;
+  text-align: center;
+  min-height: 480px;
+  padding: 0 20px;
+
+  @media (min-width: @breakpoint-tablet) {
+    color: @pimary-color;
+    text-align: left;
+    background-color: @secondary-color;
+    min-height: 830px;
+    padding: 0 0 0 117px;
+    outline: 2px dotted rebeccapurple;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    min-height: 603px;
+    padding: 0 0 0 90px;
+  }
 }
 
 .main__main-title {
   font-size: @font-size-huge;
   font-weight: @font-weight-regular;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-enormous;
+  }
 }
 
 .main__slogan {
   font-size: @font-size-small;
   text-transform: uppercase;
+  margin: 0 0 300px 0;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+    margin: 0 0 40px 0;
+  }
+}
+
+.main__program-link {
+  vertical-align: bottom;
 }

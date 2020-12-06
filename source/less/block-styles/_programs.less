@@ -1,20 +1,47 @@
+.programs {
+  outline: 2px dotted rebeccapurple;
+
+  @media (min-width: @breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 0 0;
+  }
+}
+
 .programs__article {
   background-color: @basic-gray;
+  min-height: 266px;
+
+  @media (min-width: @breakpoint-desktop) {
+    width: 47%;
+  }
 }
 
 .programs__title {
   font-size: @font-size-large;
   font-weight: @font-weight-regular;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-huge;
+  }
 }
 
 .programs__description {
   font-family: @secondary-font-family;
   font-size: @font-size-small;
   color: @special_dark-grey;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-base;
+  }
 }
 
 .programs__link {
   font-size: @font-size-base;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+  }
 }

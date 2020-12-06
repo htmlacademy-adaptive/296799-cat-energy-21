@@ -3,19 +3,25 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page">
-  <header class="page__header header">
-    <div class="header__header-container">
-      <a class="header__logo-link header__logo-container" aria-label="Логотип сайта">
-        <!-- временные логотипы, будут заменены на адаптивные -->
-        <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38" alt="Логотип в виде кота">
-        <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Логотип-наименование">
-      </a>
-      <div class="header__nav-container">
+  <div class="page__page-container">
+    <header class="page__header header">
+      <div class="header__header-container">
+        <div class="header__header-top-container">
+          <a class="header__logo-link header__logo-container" aria-label="Логотип сайта">
+            <!-- временные логотипы, будут заменены на адаптивные -->
+            <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38"
+              alt="Логотип в виде кота">
+            <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18"
+              alt="Логотип-наименование">
+          </a>
+          <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+        </div> <!-- конец контейнера верней части шапки -->
         <nav class="header__navigation navigation popup">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -29,17 +35,12 @@
             </li>
           </ul>
         </nav>
-        <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
 
-      </div>
-      <!-- конец контейнера навигации -->
-    </div>
-    <!-- конец центровщика шапки -->
-  </header>
+      </div> <!-- конец центровщика шапки -->
+    </header>
 
 
-  <main class="page__main main">
-    <div class="main__nonstrech-sections-container">
+    <main class="page__main main">
 
       <div class="main__main-information-container">
         <h1 class="main__main-title">Функциональное<br> питание для котов</h1>
@@ -47,122 +48,136 @@
         <a class="main__program-link primary-link" href="form.html">Подобрать программу</a>
       </div>
 
-      <section class="main__programs programs">
-        <h2 class="visually-hidden">Программы диеты</h2>
+      <div class="main__nonstrech-sections-container">
+        <section class="main__programs programs">
+          <h2 class="visually-hidden">Программы диеты</h2>
 
-        <article class="programs__article programs__article--slim-program">
-          <h3 class="programs__title">Похудение</h3>
-          <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programs__link" href="catalog.html">Каталог slim</a>
-        </article>
-        <article class="programs__article programs__article--pro-program">
-          <h3 class="programs__title">Набор массы</h3>
-          <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs__link" href="catalog.html">Каталог pro</a>
-        </article>
-      </section>
+          <article class="programs__article programs__article--slim-program">
+            <h3 class="programs__title">Похудение</h3>
+            <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="programs__link" href="catalog.html">Каталог slim</a>
+          </article>
+          <article class="programs__article programs__article--pro-program">
+            <h3 class="programs__title">Набор массы</h3>
+            <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy
+              Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="programs__link" href="catalog.html">Каталог pro</a>
+          </article>
+        </section>
 
-      <section class="main__how-it-works how-it-works">
-        <h2 class="how-it-works__title">Как это работает</h2>
-        <ul class="how-it-works__list">
-          <li class="how-it-works__item">
-            <p class="how-it-works__text">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="how-it-works__item">
-            <p class="how-it-works__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-          <li class="how-it-works__item">
-            <p class="how-it-works__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="how-it-works__item">
-            <p class="how-it-works__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
-        </ul>
-      </section>
+        <section class="main__how-it-works how-it-works">
+          <h2 class="how-it-works__title">Как это работает</h2>
+          <ul class="how-it-works__list">
+            <li class="how-it-works__item">
+              <p class="how-it-works__text">Функциональное питание<br> содержит только полезные питательные вещества.
+              </p>
+            </li>
+            <li class="how-it-works__item">
+              <p class="how-it-works__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li class="how-it-works__item">
+              <p class="how-it-works__text">Замените один-два приема<br> обычной еды на наше функциональное питание.</p>
+            </li>
+            <li class="how-it-works__item">
+              <p class="how-it-works__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            </li>
+          </ul>
+        </section>
 
-    </div>
-    <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
-
-    <section class="main__story story">
-      <h2 class="story__title">Живой пример</h2>
-      <p class="story__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-      <div class="story__calculate">
-        <p class="story__parameter">5 кг<br><span class="story__parameter-description">снижение веса</span></p>
-        <p class="story__parameter">60 дней<br><span class="story__parameter-description">затрачено времени</span></p>
-        <p class="story__result">Затраты на питание: 15 000 РУБ.</p>
       </div>
-      <!-- конец блока калькуляции -->
-      <div class="story__presentation presentation">
-        <img class="presentation__pic presentation__pic--before" src="http://placehold.it/311x232" width="311" height="232" alt="Кот-жиробас с разноцветными глазами до диеты.">
-        <!-- подразумевается, что появится картинка-модификатор на таблете и десктопе -->
-        <div class="presentation__scale-container">
-          <p class="presentation__note">было</p>
-          <div class="presentation__scale">
-            <div class="presentation__progress" style="width: 45%">
-            </div>
-            <!-- конец шкалы прогресса -->
-            <div class="presentation__control">
-            </div>
-            <!-- конец контрола ползунка -->
+      <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
+
+      <section class="main__story story">
+        <div class="story__wrapper">
+          <h2 class="story__title">Живой пример</h2>
+          <p class="story__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов в день. </p>
+          <div class="story__calculate">
+            <p class="story__parameter">5 кг<br><span class="story__parameter-description">снижение веса</span></p>
+            <p class="story__parameter">60 дней<br><span class="story__parameter-description">затрачено времени</span>
+            </p>
+            <p class="story__result">Затраты на питание: 15 000 РУБ.</p>
           </div>
-          <!-- конец шкалы ползунка -->
-          <p class="presentation__note">стало</p>
+          <!-- конец блока калькуляции -->
+          <div class="story__presentation presentation">
+            <img class="presentation__pic presentation__pic--before" src="http://placehold.it/311x232" width="311"
+              height="232" alt="Кот-жиробас с разноцветными глазами до диеты.">
+            <!-- подразумевается, что появится картинка-модификатор на таблете и десктопе -->
+            <div class="presentation__scale-container">
+              <p class="presentation__note">было</p>
+              <div class="presentation__scale">
+                <div class="presentation__progress" style="width: 45%">
+                </div>
+                <!-- конец шкалы прогресса -->
+                <div class="presentation__control">
+                </div>
+                <!-- конец контрола ползунка -->
+              </div>
+              <!-- конец шкалы ползунка -->
+              <p class="presentation__note">стало</p>
+            </div>
+            <!-- конец контейнера ползунка -->
+          </div><!-- конец блока наглядной демонстрации результата -->
+        </div><!-- конец центровщика части сайта, которая тянется на всю ширину -->
+      </section>
+
+    </main>
+
+    <footer class="page__footer footer">
+      <section class="footer__contacts contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__info">
+          <p class="contacts__invitation"><b>Приглашаем<br>
+              к сотрудничеству<br> дилеров!</b></p>
+          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__city">Санкт-Петербург</span></p>
         </div>
-        <!-- конец контейнера ползунка -->
-      </div>
-      <!-- конец блока наглядной демонстрации результата -->
-    </section>
+        <!-- конец блока с адресом и приглашением -->
 
-  </main>
-
-  <footer class="page__footer footer">
-    <section class="footer__contacts contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__info">
-        <p class="contacts__invitation"><b>приглашаем
-            к сотрудничеству дилеров!</b></p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8
-          <span class="contacts__city">Санкт-Петербург</span></p>
-      </div>
-      <!-- конец блока с адресом и приглашением -->
-
-      <div class="contacts__map">
-        <div class="contacts__map-pin">
+        <div class="contacts__map">
+          <div class="contacts__map-pin">
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
+            width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
-          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-        </iframe>
-      </div>
-      <!-- конец контейнкра с картой -->
-    </section>
-    <div class="footer__nonstrech-footer-container">
-      <a class="footer__logo">
-        <img class="footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип-наименование">
-      </a>
-      <div class="footer__social">
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы вконтакте"></a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы в инстаграме"></a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке"></a>
-          </li>
-        </ul>
-      </div>
-      <!-- конец блока с ссылками на соцсети -->
-      <p class="footer__copy">
-        <span class="footer__copy-name">HTML Academy</span>
-        <a class="footer__copy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип Академии, переход на сайт Академии">
-          <!-- временный тег img, здесь будет svg из спрайта -->
-          <img class="footer__copy-pic" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Академии, переход на сайт Академии">
+        <!-- конец контейнкра с картой -->
+      </section>
+      <div class="footer__nonstrech-footer-container">
+        <a class="footer__logo">
+          <img class="footer__logo-text" src="http://placehold.it/128x24" width="128" height="24"
+            alt="Логотип-наименование">
         </a>
-      </p>
-    </div>
-    <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
-  </footer>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы вконтакте"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы в инстаграме"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке"></a>
+            </li>
+          </ul>
+        </div>
+        <!-- конец блока с ссылками на соцсети -->
+        <p class="footer__copy">
+          <span class="footer__copy-name">HTML Academy</span>
+          <a class="footer__copy-logo" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип Академии, переход на сайт Академии">
+            <!-- временный тег img, здесь будет svg из спрайта -->
+            <img class="footer__copy-pic" src="http://placehold.it/27x34" width="27" height="34"
+              alt="Логотип Академии, переход на сайт Академии">
+          </a>
+        </p>
+      </div>
+      <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
+    </footer>
+  </div> <!-- конец центровщика страницы -->
 
 </body>
 

@@ -1,11 +1,30 @@
-.page {
+.page__page-container {
+  box-sizing: border-box;
   background-color: @secondary-color;
+  min-width: @mobile-viewport;
+  // min-width: 280px;
+  // padding: 0 20px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  // background-color: aqua;
+
+  @media (min-width: @breakpoint-tablet) {
+    background-color: tomato;
+    width: 100%;
+    // padding: 0 30px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    // padding: 0 110px;
+    background-color: yellowgreen;
+  }
 }
 
-.page-header {
-  outline: 1px dotted coral;
-}
+// .page__header {
+//   outline: 3px dotted yellow;
+// }
 
-.page-footer {
-  outline: 1px dotted magenta;
-}
+// .page__footer {
+//   outline: 3px dotted magenta;
+// }

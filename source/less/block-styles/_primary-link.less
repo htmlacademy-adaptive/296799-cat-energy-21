@@ -1,8 +1,10 @@
 .primary-link {
   .primary-link-mixin();
-
-  // .primary-link-mixin(@font-size-big, @line-height-large, auto);
   outline: 2px dotted white;
+
+  @media (min-width: @breakpoint-tablet) {
+    .primary-link-mixin(@font-size-big, @line-height-large, auto);
+  }
 }
 
 .primary-link--inner {

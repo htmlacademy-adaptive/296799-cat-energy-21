@@ -1,4 +1,44 @@
 .navigation {
-  font-size: @font-size-little-big;
+  font-size: @font-size-big;
+  font-weight: @font-weight-medium;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    flex-grow: 1;
+    font-size: @font-size-little-big;
+    font-weight: @font-weight-regular;
+    // background-color: burlywood;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    font-size: @font-size-big;
+    color: @secondary-color;
+    background-color: yellowgreen;
+    width: 50%;
+  }
+}
+
+.navigation__list {
+  @media (min-width: @breakpoint-tablet) {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+  }
+}
+
+.navigation__item {
+  text-align: center;
+  border-bottom: 1px solid @special_light-grey;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: auto;
+    margin: 0 0 0 20px;
+    border-bottom: none;
+    // outline: 2px dashed red;
+  }
+}
+
+.navigation__link {
+  line-height: @line-height-enormous;
+  white-space: nowrap;
 }
