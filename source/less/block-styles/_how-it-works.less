@@ -1,11 +1,10 @@
 .how-it-works {
   min-height: 400px;
   background-color: @secondary-color;
-  outline: 2px dotted coral;
+  // outline: 2px dotted coral;
 
   @media (min-width: @breakpoint-tablet) {
     min-height: 780px;
-    // font-size: @font-size-huge;
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -23,15 +22,22 @@
 }
 
 .how-it-works__list {
-  outline: 2px dotted lime;
-
   @media (min-width: @breakpoint-tablet) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 280px 280px;
+    grid-column-gap: 120px;
+    grid-row-gap: 32px;
+    justify-content: space-between;
+    padding: 0 250px 0 0;
   }
 
   @media (min-width: @breakpoint-desktop) {
+    display: flex;
     justify-content: space-between;
+    grid-column-gap: 32px;
+    grid-row-gap: 0;
+    padding: 0;
   }
 }
 
@@ -45,12 +51,12 @@
     box-sizing: border-box;
     width: 250px;
     min-height: 280px;
-    margin: 18px 85px 18px 0;
+    margin: 0;
     padding: 110px 0 0 0;
   }
 
   @media (min-width: @breakpoint-desktop) {
-    margin: 18px 0;
+    width: 400px;
   }
 }
 
