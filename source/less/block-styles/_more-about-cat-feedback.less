@@ -1,8 +1,32 @@
+.more-about-cat-feedback {
+  @media (min-width: @breakpoint-desktop) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+}
+
 .more-about-cat-feedback__leader {
   font-size: @font-size-large;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-huge;
+  }
 }
 
 .more-about-cat-feedback__field::placeholder {
   text-transform: uppercase;
   color: @special_dark-grey;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+  }
+}
+
+.more-about-cat-feedback__field {
+  width: 100%;
+  min-height: 150px;
+
+  @media (min-width: @breakpoint-tablet) {
+    min-height: 170px;
+  }
 }

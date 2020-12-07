@@ -1,7 +1,42 @@
+.wishes-feedback {
+  @media (min-width: @breakpoint-desktop) {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+  }
+}
+
+.wishes-feedback__fieldset-inner-wrapper {
+  @media (min-width: @breakpoint-tablet) {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 70px 70px;
+    grid-column-gap: 120px;
+    grid-row-gap: 32px;
+    justify-content: space-between;
+    padding: 0 250px 0 0;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+    grid-column-gap: 32px;
+    grid-row-gap: 0;
+    padding: 0;
+  }
+}
+
 .wishes-feedback__leader {
   font-size: @font-size-large;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-huge;
+  }
 }
 
 .wishes-feedback__field-description {
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+  }
 }

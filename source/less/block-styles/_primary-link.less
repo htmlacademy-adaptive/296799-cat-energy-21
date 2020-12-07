@@ -7,9 +7,10 @@
   }
 }
 
-.primary-link--inner {
+.primary-link--feedback {
   .primary-link-mixin(@font-size-base);
 
-  // .primary-link-mixin(@font-size-big, @line-height-large, auto);
-  outline: 2px dotted white;
+  @media (min-width: @breakpoint-tablet) {
+    .primary-link-mixin(@font-size-big, @line-height-large, 50%);
+  }
 }

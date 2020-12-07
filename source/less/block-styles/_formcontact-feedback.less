@@ -1,5 +1,27 @@
+.formcontact-feedback {
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+}
+
+.formcontact-feedback__fieldset-inner-wrapper {
+  @media (min-width: @breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .formcontact-feedback__leader {
   font-size: @font-size-large;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-huge;
+  }
 }
 
 .formcontact-feedback__field-description {
