@@ -9,8 +9,10 @@
 </head>
 
 <body class="page">
+  <div class="page__page-container">
   <header class="page__header header">
     <div class="header__header-container">
+      <div class="header__header-top-container">
       <a class="header__logo-link header__logo-container" href="index.html"
         aria-label="Логотип сайта, переход на главную страницу сайта">
         <!-- временные логотипы, будут заменены на адаптивные -->
@@ -18,7 +20,8 @@
         <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18"
           alt="Логотип-наименование">
       </a>
-      <div class="header__nav-container">
+      <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+    </div> <!-- конец контейнера верхней части шапки -->
         <nav class="header__navigation navigation popup">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -32,9 +35,6 @@
             </li>
           </ul>
         </nav>
-        <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
-
-      </div> <!-- конец контейнера навигации -->
     </div> <!-- конец центровщика шапки -->
   </header>
 
@@ -88,12 +88,12 @@
         <legend class="formcontact-feedback__leader">Контактные данные (владельца кота)</legend>
         <div class="formcontact-feedback__fieldset-inner-wrapper">
           <!-- для использования флексов внутри филдсета-->
-          <p class="feedback__input-container">
+          <p class="feedback__input-container feedback__input-container--formcontact">
             <label class="formcontact-feedback__field-description" for="email">E-mail:<sup>&#9913;</sup>&ensp;</label>
             <input class="formcontact-feedback__field" type="email" name="email" id="email"
               placeholder="kuklachev@gmail.com" required>
           </p>
-          <p class="feedback__input-container">
+          <p class="feedback__input-container feedback__input-container--formcontact">
             <label class="formcontact-feedback__field-description" for="tel">Телефон:<sup>&#9913;</sup>&ensp;</label>
             <input class="formcontact-feedback__field formcontact-feedback__field--tel" type="tel" name="tel" id="tel"
               placeholder="8 (960) 900-60-90" required>
@@ -103,20 +103,19 @@
 
       <fieldset class="feedback__container more-about-cat-feedback">
         <legend class="more-about-cat-feedback__leader">Комментарий</legend>
-        <textarea class="more-about-cat-feedback__field" rows="10" cols="30" name="message"
+        <textarea class="more-about-cat-feedback__field" rows="8" cols="40" name="message"
           placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
-    </form>
 
-    <fieldset class="feedback__container wishes-feedback">
-      <legend class="wishes-feedback__leader">Дополнительно</legend>
-      <div class="wishes-feedback__fieldset-inner-wrapper">
-        <!-- для использования флексов внутри филдсета-->
+      <fieldset class="feedback__container wishes-feedback">
+        <legend class="wishes-feedback__leader">Дополнительно</legend>
+        <div class="wishes-feedback__fieldset-inner-wrapper">
+          <!-- для использования флексов внутри филдсета-->
 
-        <p class="feedback__input-container">
-          <input class="wishes-feedback__field visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
-          <label class="wishes-feedback__field-description" for="sugar" tabindex="0">сахарозаменитель</label>
-        </p>
+          <p class="feedback__input-container">
+            <input class="wishes-feedback__field visually-hidden" type="checkbox" name="sugar" id="sugar" checked>
+            <label class="wishes-feedback__field-description" for="sugar" tabindex="0">сахарозаменитель</label>
+          </p>
         <!-- ///////////////////////////////// -->
 
         <p class="feedback__input-container">
@@ -139,13 +138,14 @@
     </fieldset>
 
     <div class="feedback__submit-wrapper">
-      <button class="feedback__btn primary-link primary-link--inner">
+      <button class="feedback__btn primary-link primary-link--feedback">
         Отправить заявку
       </button>
       <p class="feedback__note">
         <sup>&#9913;</sup>&ensp;&mdash;&ensp;Обязательные поля
       </p>
     </div> <!-- конец центровщика кнопки отправки и примечания -->
+  </form>
   </main>
 
   <footer class="page__footer footer">
@@ -197,7 +197,7 @@
       </p>
     </div> <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
   </footer>
-
+</div> <!-- конец центровщика страницы -->
 </body>
 
 </html>

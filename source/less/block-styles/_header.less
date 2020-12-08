@@ -5,10 +5,17 @@
 .header__header-container {
   align-items: center;
   // background-color: coral;
+  // outline: 3px dashed yellow;
+  padding: 0 20px;
 
   @media (min-width: @breakpoint-tablet) {
     display: flex;
     justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    padding: 0 110px;
   }
 }
 
@@ -18,18 +25,19 @@
   justify-content: space-between;
   // background-color: plum;
   min-height: @line-height-enormous;
-  padding: 0 0 0 20px;
   border-bottom: 1px solid @special_light-grey;
 
   @media (min-width: @breakpoint-tablet) {
     min-height: 100px;
     flex-grow: 1;
+    // padding: 0 0 0 30px;
   }
 
   @media (min-width: @breakpoint-desktop) {
     min-height: 163px;
     flex-grow: 1;
     width: 50%;
+    // padding: 0 0 0 110px;
   }
 }
 
