@@ -1,6 +1,22 @@
 .card {
   box-sizing: border-box;
   background-color: lime;
+  width: 320px;
+  min-height: 190px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 324px;
+    min-height: 430px;
+    margin: 0;
+    padding: 40px;
+    border-top: none;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    width: 245px;
+  }
 }
 
 .card__pic {
