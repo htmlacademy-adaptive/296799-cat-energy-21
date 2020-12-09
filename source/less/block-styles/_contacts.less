@@ -8,9 +8,14 @@
   background-color: @secondary-color;
   padding: 0 20px;
 
+  @media (min-width: @breakpoint-tablet) {
+    padding: 0 30px;
+  }
+
   @media (min-width: @breakpoint-desktop) {
     position: absolute;
     top: 95px;
+    left: 110px;
     box-sizing: border-box;
     width: 570px;
     min-height: 200px;
@@ -49,14 +54,4 @@
 
 .contacts__map iframe {
   width: 100%;
-
-  @media (min-width: @breakpoint-tablet) {
-    width: 100vw;
-    margin: 0 0 0 -30px;
-  }
-
-  @media (min-width: @breakpoint-desktop) {
-    width: 100vw;
-    margin: 0 0 0 -110px;
-  }
 }
