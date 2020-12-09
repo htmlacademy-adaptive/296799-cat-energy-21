@@ -1,11 +1,33 @@
+.card {
+  box-sizing: border-box;
+  background-color: lime;
+}
+
+.card__pic {
+  float: left;
+
+  @media (min-width: @breakpoint-tablet) {
+    float: none;
+  }
+}
+
 .card__title {
   color: @special_dark-grey-secondary;
   font-weight: @font-weight-regular;
   text-transform: uppercase;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-big;
+    text-align: center;
+  }
 }
 
 .card__description {
   font-family: @secondary-font-family;
   font-size: @font-size-small;
   color: @special_dark-grey;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-base;
+  }
 }

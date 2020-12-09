@@ -9,14 +9,20 @@
 </head>
 
 <body class="page">
-  <header class="page__header header">
-    <div class="header__header-container">
-      <a class="header__logo-link header__logo-container" href="index.html" aria-label="Логотип сайта, переход на главную страницу сайта">
-        <!-- временные логотипы, будут заменены на адаптивные -->
-        <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38" alt="Логотип в виде кота">
-        <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Логотип-наименование">
-      </a>
-      <div class="header__nav-container">
+  <div class="page__page-container">
+    <header class="page__header header">
+      <div class="header__header-container">
+        <div class="header__header-top-container">
+          <a class="header__logo-link header__logo-container" href="index.html"
+            aria-label="Логотип сайта, переход на главную страницу сайта">
+            <!-- временные логотипы, будут заменены на адаптивные -->
+            <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38"
+              alt="Логотип в виде кота">
+            <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18"
+              alt="Логотип-наименование">
+          </a>
+          <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+        </div> <!-- конец контейнера верхней части шапки -->
         <nav class="header__navigation navigation popup">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -30,16 +36,14 @@
             </li>
           </ul>
         </nav>
-        <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+      </div> <!-- конец центровщика шапки -->
+    </header>
 
-      </div> <!-- конец контейнера навигации -->
-    </div> <!-- конец центровщика шапки -->
-  </header>
-
-  <main class="page__main catalog">
-    <div class="page__nonstrech-sections-container">
-      <h1 class="catalog__title">Каталог продукции</h1>
-      <h2 class="visually-hidden">Основные товары</h2>
+    <main class="page__main catalog">
+      <div class="catalog__nonstrech-sections-container">
+        <h1 class="catalog__title">Каталог продукции</h1>
+        <h2 class="visually-hidden">Основные товары</h2>
+      </div> <!-- конец центровщика блоков, которые не должны тянуться на ширину экрана -->
       <ul class="catalog__list">
         <!-- 1111111111111111111111111111111111111111111111 -->
         <li class="catalog__item card" tabindex="0">
@@ -210,87 +214,91 @@
           <a class="catalog__show-more-link" href="#">Показать все</a>
         </li>
       </ul>
-    </div> <!-- конец центровщика блоков, которые не должны тянуться на ширину экрана -->
-    <section class="catalog__fatures features">
-      <h2 class="features__title">Дополнительные товары</h2>
-      <div class="page__nonstrech-sections-container">
-        <ul class="features__list">
-          <!-- 1111111111111111111111111111111111111111111111 -->
-          <li class="features__item">
-            <h3 class="features__item-title">Сахарозаменитель</h3>
-            <p class="features__parameters">1 упаковка (100 г)<span class="features__price">200 Р.</span></p>
-            <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
-          </li>
-          <!-- 2222222222222222222222222222222222222222222222222222222222 -->
-          <li class="features__item">
-            <h3 class="features__item-title">Питьевая вода</h3>
-            <p class="features__parameters">5 литров<span class="features__price">50 Р.</span></p>
-            <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
-          </li>
-          <!-- 3333333333333333333333333333333333333333333333333 -->
-          <li class="features__item">
-            <h3 class="features__item-title">Молоко</h3>
-            <p class="features__parameters">1 литр<span class="features__price">100 Р.</span></p>
-            <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
-          </li>
-          <!-- 444444444444444444444444444444444444444444444444 -->
-          <li class="features__item">
-            <h3 class="features__item-title">Витамины</h3>
-            <p class="features__parameters">1 упаковка (30 г)<span class="features__price">300 Р.</span></p>
-            <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
-          </li>
-        </ul>
-        <a class="features__all-purchase-link" href="#">Закажите все<br>и получите чехол для<br>кота в подарок!</a>
+      <div class="catalog__nonstrech-sections-container catalog__nonstrech-sections-container--features">
+        <section class="catalog__fatures features">
+          <h2 class="features__title">Дополнительные товары</h2>
+          <div class="features__wrapper">
+            <ul class="features__list">
+              <!-- 1111111111111111111111111111111111111111111111 -->
+              <li class="features__item">
+                <h3 class="features__item-title">Сахарозаменитель</h3>
+                <p class="features__parameters">1 упаковка (100 г)<span class="features__price">200 Р.</span></p>
+                <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
+              </li>
+              <!-- 2222222222222222222222222222222222222222222222222222222222 -->
+              <li class="features__item">
+                <h3 class="features__item-title">Питьевая вода</h3>
+                <p class="features__parameters">5 литров<span class="features__price">50 Р.</span></p>
+                <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
+              </li>
+              <!-- 3333333333333333333333333333333333333333333333333 -->
+              <li class="features__item">
+                <h3 class="features__item-title">Молоко</h3>
+                <p class="features__parameters">1 литр<span class="features__price">100 Р.</span></p>
+                <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
+              </li>
+              <!-- 444444444444444444444444444444444444444444444444 -->
+              <li class="features__item">
+                <h3 class="features__item-title">Витамины</h3>
+                <p class="features__parameters">1 упаковка (30 г)<span class="features__price">300 Р.</span></p>
+                <a class="features__purchase-link primary-link primary-link--inner" href="#">Заказать</a>
+              </li>
+            </ul>
+            <a class="features__all-purchase-link" href="#">Закажите все<br>и получите чехол для<br>кота в подарок!</a>
+          </div>
+        </section>
       </div> <!-- конец центровщика блоков, которые не должны тянуться на ширину экрана -->
-    </section>
+    </main>
 
-  </main>
-
-  <footer class="page__footer footer">
-    <section class="footer__contacts contacts">
-      <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__info">
-        <p class="contacts__invitation"><b>приглашаем
-            к сотрудничеству дилеров!</b></p>
-        <p class="contacts__address">ул. Большая
-          Конюшенная, д. 19/8
-          <span class="contacts__city">Санкт-Петербург</span></p>
-      </div> <!-- конец блока с адресом и приглашением -->
-
-      <div class="contacts__map">
-        <div class="contacts__map-pin">
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
-          width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-        </iframe>
-      </div> <!-- конец контейнкра с картой -->
-    </section>
-    <div class="footer__nonstrech-footer-container">
-      <a class="footer__logo" href="index.html">
-        <img class="footer__logo-text" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип-наименование">
-      </a>
-      <div class="footer__social">
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы вконтакте"></a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы в инстаграме"></a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке"></a>
-          </li>
-        </ul>
-      </div> <!-- конец блока с ссылками на соцсети -->
-      <p class="footer__copy">
-        <span class="footer__copy-name">HTML Academy</span>
-        <a class="footer__copy-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип Академии, переход на сайт Академии">
-          <!-- временный тег img, здесь будет svg из спрайта -->
-          <img class="footer__copy-pic" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип Академии, переход на сайт Академии">
+    <footer class="page__footer footer">
+      <section class="footer__contacts contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__info">
+          <p class="contacts__invitation"><b>приглашаем
+              к сотрудничеству дилеров!</b></p>
+          <p class="contacts__address">ул. Большая
+            Конюшенная, д. 19/8
+            <span class="contacts__city">Санкт-Петербург</span></p>
+        </div> <!-- конец блока с адресом и приглашением -->
+        <div class="contacts__map">
+          <div class="contacts__map-pin">
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1600943056077!5m2!1sru!2sru"
+            width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
+        </div> <!-- конец контейнкра с картой -->
+      </section>
+      <div class="footer__nonstrech-footer-container">
+        <a class="footer__logo" href="index.html">
+          <img class="footer__logo-text" src="http://placehold.it/128x24" width="128" height="24"
+            alt="Логотип-наименование">
         </a>
-      </p>
-    </div> <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
-  </footer>
+        <div class="footer__social">
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы вконтакте"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы в инстаграме"></a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке"></a>
+            </li>
+          </ul>
+        </div> <!-- конец блока с ссылками на соцсети -->
+        <p class="footer__copy">
+          <span class="footer__copy-name">HTML Academy</span>
+          <a class="footer__copy-logo" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип Академии, переход на сайт Академии">
+            <!-- временный тег img, здесь будет svg из спрайта -->
+            <img class="footer__copy-pic" src="http://placehold.it/27x34" width="27" height="34"
+              alt="Логотип Академии, переход на сайт Академии">
+          </a>
+        </p>
+      </div> <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
+    </footer>
+  </div> <!-- конец центровщика страницы -->
 
 </body>
 
