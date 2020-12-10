@@ -14,13 +14,16 @@
       <div class="header__header-container">
         <div class="header__header-top-container">
           <a class="header__logo-link header__logo-container" aria-label="Логотип сайта">
-            <!-- временные логотипы, будут заменены на адаптивные -->
-            <img class="header__logo-pic" src="http://placehold.it/34x38" width="34" height="38"
+            <picture>
+              <source media="(min-width: 1100px)" srcset="img/logo-desktop.png">
+              <source media="(min-width: 740px)" srcset="img/logo-tablet.png">
+              <img class="header__logo-pic" src="img/logo-mobile.png" width="34" height="38"
               alt="Логотип в виде кота">
-            <img class="header__logo-text" src="http://placehold.it/101x18" width="101" height="18"
+            </picture>
+            <img class="header__logo-text" src="img/logo-mobile-2.png" width="101" height="18"
               alt="Логотип-наименование">
           </a>
-          <button class="header__menu-toggle-button" aria-label="Кнопка раскрытия-закрытия меню"></button>
+          <button class="header__menu-toggle-button header__menu-toggle-button--cross" aria-label="Кнопка раскрытия-закрытия меню"></button>
         </div> <!-- конец контейнера верхней части шапки -->
         <nav class="header__navigation navigation popup">
           <ul class="navigation__list">
