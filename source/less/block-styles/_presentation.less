@@ -2,29 +2,96 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 320px;
-  background-color: aqua;
+  // min-height: 308px;
+  padding: 30px 0 0 0;
+  // outline: 5px dotted magenta;
 
   @media (min-width: @breakpoint-tablet) {
-    min-height: 620px;
+    min-height: 580px;
+    padding: 38px 0 0 45px;
   }
 
   @media (min-width: @breakpoint-desktop) {
-    min-height: 656px;
+    // min-height: 656px;
+    padding: 0 0 55px 0;
   }
 }
 
 .presentation__note {
+  display: inline-block;
+  box-sizing: border-box;
   font-size: @font-size-base;
   text-transform: uppercase;
+  width: 70px;
+  margin: 33px 0;
+  padding: 0 14px;
+
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-big;
+    line-height: 30px;
+    width: auto;
+    margin: 12px 0;
+    padding: 0;
+    border-bottom: 2px dotted @special_light-grey-2;
   }
 }
 
 .presentation__scale-container {
+  // background-color: aqua;
   display: flex;
-  justify-content: space-between;
-  background-color: bisque;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @breakpoint-tablet) {
+    justify-content: space-between;
+    padding: 0 100px 0 55px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    padding: 0 25px 0 85px;
+  }
+}
+
+.presentation__scale {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 86px;
+  height: 14px;
+  padding: 0 2px;
+  border: 1px solid @special_light-grey-3;
+  border-radius: 6px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 428px;
+    height: 0;
+    border: 2px solid @special_light-grey-3;
+  }
+}
+
+.presentation__progress {
+  height: 6px;
+  border-radius: 6px;
+  background-color: @basic-green;
+
+  @media (min-width: @breakpoint-tablet) {
+    background-color: transparent;
+  }
+}
+
+.presentation__control {
+  @media (min-width: @breakpoint-tablet) {
+    width: 9px;
+    height: 9px;
+    background-color: @basic-green;
+    border: 12px solid @secondary-color;
+    border-radius: 50%;
+    box-shadow: 0 0 6px -2px @pimary-color;
+  }
+}
+
+.presentation__pic {
+  width: 677px;
+  height: auto;
 }

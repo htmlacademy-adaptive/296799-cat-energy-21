@@ -12,19 +12,24 @@
   background-color: @basic-green;
   border: none;
 
-  // &:hover,
-  // &:focus,
-  // a &:focus {
-  //
-  // }
-  //
-  // &:active {
-  //
-  // }
+  &:hover,
+  &:focus,
+  a &:focus {
+    background-color: @basic-green-2;
+  }
 
-  // &--disabled,
-  // &--disabled:hover,
-  // &--disabled:active {
-  //
-  // }
+  &:active {
+    color: @secondary-color-semitransparent;
+    background-color: @basic-green-2;
+  }
+}
+
+.decorate-number-mixin (@content: "1") {
+  position: absolute;
+  content: @content;
+  font-size: @font-size-immense;
+  color: @basic-gray;
+  top: -60px;
+  left: 115px;
+  // z-index: -1;
 }

@@ -1,11 +1,10 @@
 .header {
-  background-color: @secondary-color;
+  background-color: transparent;
 }
 
 .header__header-container {
   // outline: 3px dashed red;
   align-items: center;
-  // background-color: coral;
 
   @media (min-width: @breakpoint-tablet) {
     display: flex;
@@ -15,6 +14,7 @@
 
   @media (min-width: @breakpoint-desktop) {
     padding: 0 110px;
+    background-color: transparent;
   }
 }
 
@@ -104,6 +104,7 @@
 .header__logo-link:hover,
 .header__logo-link:focus {
   opacity: 0.8;
+  transition: 0.4s;
 }
 
 .header__logo-link:active {
@@ -113,6 +114,7 @@
 .header__menu-toggle-button:hover,
 .header__menu-toggle-button:focus {
   opacity: 0.8;
+  transition: 0.4s;
 }
 
 .header__menu-toggle-button:active {
