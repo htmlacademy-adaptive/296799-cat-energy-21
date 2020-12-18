@@ -21,18 +21,21 @@
 .navigation__list {
   @media (min-width: @breakpoint-tablet) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 -20px 0 0;
     padding: 8px 0 0 0;
   }
 }
 
 .navigation__item {
+  // background-color: seagreen;
   text-align: center;
   border-bottom: 1px solid @special_light-grey;
 
   @media (min-width: @breakpoint-tablet) {
     width: auto;
-    margin: 0 0 0 20px;
+    // margin: 0 0 0 20px;
     border-bottom: none;
     // outline: 2px dashed red;
   }
