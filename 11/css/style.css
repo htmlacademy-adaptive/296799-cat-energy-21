@@ -410,7 +410,6 @@ img {
 @media (min-width: 600px) {
   .header__header-top-container {
     min-height: 100px;
-    flex: none;
     border-bottom: none;
     padding: 0 75px 0 0;
   }
@@ -516,7 +515,9 @@ img {
 @media (min-width: 600px) {
   .navigation__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 -20px 0 0;
     padding: 8px 0 0 0;
   }
 }
@@ -527,7 +528,6 @@ img {
 @media (min-width: 600px) {
   .navigation__item {
     width: auto;
-    margin: 0 0 0 20px;
     border-bottom: none;
   }
 }
@@ -577,14 +577,15 @@ img {
   .programs__article {
     min-height: 372px;
     margin: 0 0 30px 0;
-    padding: 75px 260px 0 55px;
   }
   .programs__article--slim-program {
+    padding: 75px 270px 0 55px;
     background-image: url("../img/cat-back-t.svg");
     background-repeat: no-repeat;
     background-position: 88% center;
   }
   .programs__article--pro-program {
+    padding: 75px 290px 0 55px;
     background-image: url("../img/cat-back-pro-t.svg");
     background-repeat: no-repeat;
     background-position: 94% 52%;
@@ -932,6 +933,27 @@ img {
     margin: 155px 0 30px 0;
   }
 }
+.story__calculate {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 135px;
+  padding: 0;
+}
+@media (min-width: 600px) {
+  .story__calculate {
+    align-items: center;
+    min-height: 170px;
+  }
+}
+@media (min-width: 1100px) {
+  .story__calculate {
+    width: 82%;
+    min-width: 330px;
+    flex-wrap: wrap;
+    min-height: 225px;
+  }
+}
 .story__parameter {
   box-sizing: border-box;
   font-size: 24px;
@@ -950,6 +972,11 @@ img {
     height: 75px;
     line-height: 60px;
     margin: 0 40px 0 0;
+  }
+}
+@media (min-width: 1100px) {
+  .story__parameter {
+    margin: 0;
   }
 }
 .story__parameter-description {
@@ -984,6 +1011,8 @@ img {
 .story__result {
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
   margin: 0 auto;
   padding: 10px 0 0 0;
 }
@@ -999,34 +1028,10 @@ img {
 }
 @media (min-width: 1100px) {
   .story__result {
-    width: 100%;
-    text-align: left;
-  }
-}
-@media (min-width: 1100px) {
-  .story__result-price {
-    display: inline-block;
-    float: right;
-    padding: 0 120px 0 0;
-  }
-}
-.story__calculate {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  min-height: 135px;
-  padding: 0;
-}
-@media (min-width: 600px) {
-  .story__calculate {
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 170px;
-  }
-}
-@media (min-width: 1100px) {
-  .story__calculate {
-    min-height: 225px;
+    display: flex;
+    justify-content: space-between;
+    width: 89%;
+    margin: 0;
   }
 }
 .presentation {
@@ -1051,16 +1056,25 @@ img {
   box-sizing: border-box;
   font-size: 16px;
   text-transform: uppercase;
-  width: 70px;
-  margin: 33px 0;
-  padding: 0 14px;
+  width: auto;
+  margin: 33px 14px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+.presentation__note:hover,
+.presentation__note:focus {
+  border-bottom: 2px solid #d9d9d9;
+}
+.presentation__note:active,
+.presentation__note:visited {
+  border-bottom: 2px solid transparent;
 }
 @media (min-width: 600px) {
   .presentation__note {
     font-size: 20px;
     line-height: 30px;
-    width: auto;
-    margin: 12px 0;
+    margin: 12px 14px;
     padding: 0;
     border-bottom: 2px dotted #d9d9d9;
   }
@@ -1073,12 +1087,12 @@ img {
 @media (min-width: 600px) {
   .presentation__scale-container {
     justify-content: space-between;
-    padding: 0 100px 0 55px;
+    padding: 0 85px 0 40px;
   }
 }
 @media (min-width: 1100px) {
   .presentation__scale-container {
-    padding: 0 25px 0 85px;
+    padding: 0 10px 0 70px;
   }
 }
 .presentation__scale {
@@ -1115,7 +1129,18 @@ img {
     background-color: #68b738;
     border: 12px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 0 6px -2px #000000;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+  .presentation__control:hover,
+  .presentation__control:focus {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+  .presentation__control:active {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #68b738;
+    box-shadow: inset 0 0 0 12px #ffffff;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
   }
 }
 .presentation__pic {
