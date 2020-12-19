@@ -1,5 +1,5 @@
 .how-it-works {
-  min-height: 400px;
+  min-height: 415px;
   background-color: @secondary-color;
   // outline: 2px dotted coral;
 
@@ -15,21 +15,25 @@
 .how-it-works__title {
   font-size: @font-size-huge;
   font-weight: @font-weight-regular;
+  line-height: @line-height-little-big;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-enormous;
+    line-height: @line-height-huge;
   }
 }
 
 .how-it-works__list {
+  padding: 12px 0 0 0;
+
   @media (min-width: @breakpoint-tablet) {
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 280px 280px;
-    grid-column-gap: 120px;
-    grid-row-gap: 32px;
+    grid-column-gap: 130px;
+    grid-row-gap: 35px;
     justify-content: space-between;
-    padding: 0 250px 0 0;
+    padding: 20px 250px 0 0;
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -37,26 +41,74 @@
     justify-content: space-between;
     grid-column-gap: 32px;
     grid-row-gap: 0;
-    padding: 0;
+    padding: 20px 0 0 0;
   }
 }
 
 .how-it-works__item {
-  background-color: beige;
+  // outline: 3px dotted blue;
   height: 60px;
-  padding: 0 30px 0 80px;
-  margin: 10px 0;
+  padding: 0 0 0 80px;
+  margin: 0 0 20px 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &--eco {
+    background-image: url("../img/leaf.svg");
+  }
+
+  &--powder {
+    background-image: url("../img/wash.svg");
+  }
+
+  &--food {
+    background-image: url("../img/eat.svg");
+  }
+
+  &--time {
+    background-image: url("../img/watch.svg");
+  }
 
   @media (min-width: @breakpoint-tablet) {
+    position: relative;
     box-sizing: border-box;
     width: 250px;
     min-height: 280px;
     margin: 0;
     padding: 110px 0 0 0;
-  }
+    background-position: left top;
 
-  @media (min-width: @breakpoint-desktop) {
-    width: 400px;
+    &--eco {
+      background-image: url("../img/leaf-t.svg");
+    }
+
+    &--powder {
+      background-image: url("../img/wash-t.svg");
+    }
+
+    &--food {
+      background-image: url("../img/eat-t.svg");
+    }
+
+    &--time {
+      background-image: url("../img/watch-t.svg");
+    }
+
+    &--eco::before {
+      .decorate-number-mixin ();
+    }
+
+    &--powder::before {
+      .decorate-number-mixin ("2");
+    }
+
+    &--food::before {
+      .decorate-number-mixin ("3");
+    }
+
+    &--time::before {
+      .decorate-number-mixin ("4");
+    }
   }
 }
 
@@ -64,8 +116,21 @@
   font-family: @secondary-font-family;
   font-size: @font-size-small;
   color: @special_dark-grey;
+  line-height: @line-height-base;
+  margin: 0;
 
   @media (min-width: @breakpoint-tablet) {
+    position: relative;
     font-size: @font-size-base;
+    line-height: @line-height-medium;
+    z-index: 1;
+  }
+}
+
+.how-it-works__text br {
+  display: none;
+
+  @media (min-width: @breakpoint-tablet) {
+    display: inline;
   }
 }

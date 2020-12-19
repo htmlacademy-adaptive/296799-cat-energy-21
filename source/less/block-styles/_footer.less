@@ -1,19 +1,22 @@
 .footer {
-  padding: 0 0 10px 0;
   background-color: @basic-gray;
 }
 
 .footer__nonstrech-footer-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  padding: 38px 20px 25px 20px;
   min-height: 236px;
-  // outline: 2px dashed red;
 
   @media (min-width: @breakpoint-tablet) {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     min-height: 150px;
-    padding: 0 30px;
+    padding: 11px 30px 25px 30px;
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -21,14 +24,31 @@
   }
 }
 
-.footer__logo {
-  margin: 38px 0;
+.footer__logo-link {
   display: inline-block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-// .footer__social {
-//   background-color: violet;
-// }
+.footer__social {
+  margin: 32px 0 22px 0;
+  min-height: 60px;
+  border-top: 1px solid @special_light-grey-2;
+  border-bottom: 1px solid @special_light-grey-2;
+
+  @media (min-width: @breakpoint-tablet) {
+    border-top: none;
+    border-bottom: none;
+  }
+}
 
 .footer__social-list {
   display: flex;
@@ -36,22 +56,97 @@
   align-items: center;
   width: 130px;
   margin: 0 auto;
-  min-height: 65px;
-  // outline: 1px solid yellow;
+  min-height: 60px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 150px;
+    padding: 0 0 5px 20px;
+  }
 }
 
 .footer__social-item {
-  width: 33px;
-  height: 33px;
-  background-color: lime;
+  width: 25px;
+  height: 25px;
+
+  @media (min-width: @breakpoint-tablet) {
+    display: flex;
+    align-items: center;
+    width: 29px;
+    height: 40px;
+  }
 }
 
-// .footer__social-link {
+.footer__social-link {
+  color: @special_grey-2;
+  width: 100%;
 
-// }
+  &:hover,
+  &:focus {
+    color: @basic-green;
+    transition: 0.4s;
+  }
+
+  &:active {
+    color: @basic-green;
+    opacity: 0.3;
+  }
+}
+
+.footer__social-pic--vk {
+  width: 23px;
+  height: 13px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 29px;
+    height: 17px;
+  }
+}
+
+.footer__social-pic--inst {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.footer__social-pic--fb {
+  width: 11px;
+  height: 22px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 20px;
+    height: 28px;
+  }
+}
+
 
 .footer__copy-name {
   font-family: @secondary-font-family;
   font-size: @font-size-base;
   color: @special_dark-grey;
+}
+
+.footer__copy-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  fill: @special_grey-2;
+
+  &:hover,
+  &:focus {
+    fill: @basic-green;
+    transition: 0.4s;
+  }
+
+  &:active {
+    fill: @basic-green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 165px;
+  }
 }

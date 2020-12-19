@@ -1,12 +1,10 @@
 .header {
-  background-color: @secondary-color;
+  background-color: transparent;
 }
 
 .header__header-container {
+  // outline: 3px dashed red;
   align-items: center;
-  // background-color: coral;
-  // outline: 3px dashed yellow;
-  padding: 0 20px;
 
   @media (min-width: @breakpoint-tablet) {
     display: flex;
@@ -16,6 +14,7 @@
 
   @media (min-width: @breakpoint-desktop) {
     padding: 0 110px;
+    background-color: transparent;
   }
 }
 
@@ -25,19 +24,20 @@
   justify-content: space-between;
   // background-color: plum;
   min-height: @line-height-enormous;
+  padding: 0 20px;
   border-bottom: 1px solid @special_light-grey;
 
   @media (min-width: @breakpoint-tablet) {
     min-height: 100px;
-    flex-grow: 1;
-    // padding: 0 0 0 30px;
+    // flex: none;
+    border-bottom: none;
+    padding: 0 75px 0 0;
   }
 
   @media (min-width: @breakpoint-desktop) {
     min-height: 163px;
     flex-grow: 1;
     width: 50%;
-    // padding: 0 0 0 110px;
   }
 }
 
@@ -49,7 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(50% + 45px);
+  width: calc(50% + 50px);
   // background-color: beige;
 
   @media (min-width: @breakpoint-tablet) {
@@ -66,9 +66,57 @@
   padding: 0;
   border: none;
   outline: none;
-  background-color: darkorchid;
+  background-color: @secondary-color;
+
+  &--cross {
+    background-image: url("../img/cross.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 45%;
+  }
+
+  &--burger {
+    background-image: url("../img/burger.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 45%;
+  }
 
   @media (min-width: @breakpoint-tablet) {
     display: none;
   }
+}
+
+.header__logo-pic {
+  @media (min-width: @breakpoint-tablet) {
+    width: 174px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    width: 202px;
+  }
+}
+
+.header__logo-text {
+  @media (min-width: @breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.header__logo-link:hover,
+.header__logo-link:focus {
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.header__logo-link:active {
+  opacity: 0.6;
+}
+
+.header__menu-toggle-button:hover,
+.header__menu-toggle-button:focus {
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.header__menu-toggle-button:active {
+  opacity: 0.6;
 }

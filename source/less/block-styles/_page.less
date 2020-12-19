@@ -6,12 +6,14 @@
   overflow-x: hidden;
 
   @media (min-width: @breakpoint-tablet) {
-    // background-color: tomato;
     width: 100%;
   }
 
   @media (min-width: @breakpoint-desktop) {
     max-width: @desktop-viewport;
-    // background-color: aqua;
+    background: linear-gradient(to bottom, transparent 150px, @secondary-color 150px), linear-gradient(to right, transparent 50%, @basic-green 50%);
+    background-image: url("../img/cat-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 }
