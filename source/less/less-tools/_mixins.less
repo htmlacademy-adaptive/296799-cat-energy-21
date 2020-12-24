@@ -1,4 +1,8 @@
-.primary-link-mixin(@font-size: @font-size-small, @line-height: @line-height-big, @width: 100%) {
+// Многократно используемая зелёная кнопкообразная ссылка
+
+.primary-link-mixin (@font-size: @font-size-small,
+  @line-height: @line-height-big,
+  @width: 100%) {
   box-sizing: border-box;
   display: inline-block;
   font-size: @font-size;
@@ -16,13 +20,17 @@
   &:focus,
   a &:focus {
     background-color: @basic-green-2;
+    transition: 0.4s;
   }
 
   &:active {
     color: @secondary-color-semitransparent;
     background-color: @basic-green-2;
+    transition: 0.4s;
   }
 }
+
+// Декоративная фоновая цифра в списке "Как это работает"
 
 .decorate-number-mixin (@content: "1") {
   position: absolute;
@@ -31,5 +39,31 @@
   color: @basic-gray;
   top: -60px;
   left: 115px;
-  // z-index: -1;
+}
+
+// Текстовые поля
+
+.field-mixin (@width: 100%,
+  @line-height: 43px) {
+  box-sizing: border-box;
+  width: @width;
+  line-height: @line-height;
+  padding: 0 0 0 13px;
+  margin: 0 0 0 10px;
+  border: none;
+  box-shadow: 0 0 0 1px @special_light-grey-3;
+  background-color: @secondary-color;
+
+  &:focus {
+    box-shadow: 0 0 0 2px @special_dark-grey;
+  }
+
+  &--onerror {
+    box-shadow: 0 0 0 1px @error-color;
+  }
+
+  @media (min-width: @breakpoint-tablet) {
+    line-height: @line-height-large;
+    padding: 0 0 0 23px;
+  }
 }
