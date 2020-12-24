@@ -9,6 +9,14 @@
   }
 }
 
+.more-about-cat-feedback__wrapper {
+  @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    margin: 0 auto;
+    // padding: 0 110px;
+  }
+}
+
 .more-about-cat-feedback__leader {
   display: inline-block;
   font-size: @font-size-large;
@@ -23,7 +31,8 @@
   }
 
   @media (min-width: @breakpoint-desktop) {
-    margin: 0 0 0 70px;
+    // margin: 0 0 0 70px;
+    margin-left: calc(50% - 540px);
   }
 }
 
@@ -55,6 +64,8 @@
     box-sizing: border-box;
     width: 100%;
     min-height: 175px;
+    max-width: @desktop-viewport;
+    // margin: 0 auto;
     margin: 55px 5px 55px 105px;
   }
 }

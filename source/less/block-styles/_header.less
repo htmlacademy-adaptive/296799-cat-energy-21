@@ -1,5 +1,11 @@
 .header {
   background-color: transparent;
+
+  @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    margin: 0 auto;
+    // padding: 0 110px;
+  }
 }
 
 .header__header-container {

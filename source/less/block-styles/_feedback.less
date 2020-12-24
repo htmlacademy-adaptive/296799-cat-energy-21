@@ -8,6 +8,8 @@
   }
 
   @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    margin: 0 auto;
     padding: 0 110px;
   }
 }
@@ -15,12 +17,10 @@
 .feedback__title {
   font-size: @font-size-huge;
   font-weight: @font-weight-regular;
-  // text-align: center;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-enormous;
     margin: 35px 0;
-    // text-align: left;
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -70,7 +70,6 @@
   display: flex;
   align-items: center;
   padding: 0 20px;
-  // background-color: beige;
 
   @media (min-width: @breakpoint-tablet) {
     padding: 0 65px 0 70px;
@@ -109,7 +108,6 @@
 .feedback__submit-wrapper {
   padding: 0 20px 10px 20px;
   min-height: 100px;
-  // background-color: lightblue;
 
   @media (min-width: @breakpoint-tablet) {
     box-sizing: border-box;
@@ -120,9 +118,11 @@
   }
 
   @media (min-width: @breakpoint-desktop) {
+    width: 100%;
+    max-width: @desktop-viewport;
     grid-column: 1 / span 2;
     grid-row: 5;
-    margin: 0 0 33px 0;
+    margin: 0 auto 33px auto;
     padding: 0 110px;
   }
 }

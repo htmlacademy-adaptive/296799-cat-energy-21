@@ -23,6 +23,9 @@
     display: flex;
     justify-content: space-between;
     grid-row-gap: 0;
+    max-width: @desktop-viewport;
+    margin: 0 auto;
+    // padding: 0 110px;
     padding: 40px 125px 7px 120px;
   }
 }
@@ -41,7 +44,8 @@
   }
 
   @media (min-width: @breakpoint-desktop) {
-    margin: 0 0 0 25px;
+    // margin: 0 0 0 25px;
+    margin-left: calc(50% - 670px);
   }
 }
 
