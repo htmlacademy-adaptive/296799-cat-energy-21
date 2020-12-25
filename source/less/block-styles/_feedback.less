@@ -1,14 +1,15 @@
 .feedback__intro-container {
-  // outline: 3px dashed magenta;
   padding: 0 20px;
-  min-height: 170px;
+  min-height: 132px;
 
   @media (min-width: @breakpoint-tablet) {
-    padding: 0 30px;
-    min-height: 270px;
+    padding: 0 70px;
+    min-height: 222px;
   }
 
   @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    margin: 0 auto;
     padding: 0 110px;
   }
 }
@@ -16,20 +17,27 @@
 .feedback__title {
   font-size: @font-size-huge;
   font-weight: @font-weight-regular;
-  text-align: center;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-enormous;
-    text-align: left;
+    margin: 35px 0;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    margin: 15px 0;
   }
 }
 
 .feedback__intro {
   font-size: @font-size-small;
   text-transform: uppercase;
+  line-height: @line-height-base;
+  margin: 35px 0 5px 0;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-big;
+    line-height: @line-height-medium-pro;
+    margin: 50px 0;
   }
 }
 
@@ -45,47 +53,76 @@
   font-family: @secondary-font-family;
   font-size: @font-size-small;
   text-align: center;
+  margin: 20px 0;
+
+  @media (min-width: @breakpoint-tablet) {
+    font-size: @font-size-base;
+  }
 }
 
 .feedback__container {
-  // background-color: plum;
   margin: 0;
-  padding: 0 20px;
   border-color: transparent;
-
-  @media (min-width: @breakpoint-tablet) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: @breakpoint-desktop) {
-    padding: 0 110px;
-  }
 }
 
 .feedback__input-container {
-  background-color: beige;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  @media (min-width: @breakpoint-tablet) {
+    padding: 0 65px 0 70px;
+    margin: 22px 0;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    padding: 0 40px 0 110px;
+  }
+
+  &--program {
+    @media (min-width: @breakpoint-desktop) {
+      padding: 0 65px 0 85px;
+    }
+  }
+
+  &--wishes {
+    @media (min-width: @breakpoint-tablet) {
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: @breakpoint-desktop) {
+      width: 15%;
+    }
+  }
 
   &--formcontact {
     @media (min-width: @breakpoint-desktop) {
-      width: 50%;
+      width: 47%;
+      padding: 0;
     }
   }
 }
 
 .feedback__submit-wrapper {
-  padding: 0 20px;
+  padding: 0 20px 10px 20px;
   min-height: 100px;
-  // background-color: lightblue;
 
   @media (min-width: @breakpoint-tablet) {
+    box-sizing: border-box;
     display: flex;
+    min-height: 150px;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 0 50px 70px;
   }
 
   @media (min-width: @breakpoint-desktop) {
+    width: 100%;
+    max-width: @desktop-viewport;
     grid-column: 1 / span 2;
     grid-row: 5;
+    margin: 0 auto 33px auto;
     padding: 0 110px;
   }
 }

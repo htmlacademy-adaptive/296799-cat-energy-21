@@ -1,12 +1,30 @@
 .cat-data-feedback {
+  padding: 0 0 5px 0;
+
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-big;
+    padding: 0 0 47px 0;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    width: 100%;
+    max-width: 720px;
+    margin-left: auto;
   }
 }
 
 .cat-data-feedback__field-description {
   text-transform: uppercase;
   color: @special_dark-grey;
+  white-space: nowrap;
+}
+
+.cat-data-feedback__field {
+  .field-mixin();
+
+  @media (min-width: @breakpoint-desktop) {
+    margin: 0 0 0 15px;
+  }
 }
 
 .cat-data-feedback__field::placeholder {

@@ -1,5 +1,11 @@
 .header {
   background-color: transparent;
+
+  @media (min-width: @breakpoint-desktop) {
+    max-width: @desktop-viewport;
+    margin: 0 auto;
+    // padding: 0 110px;
+  }
 }
 
 .header__header-container {
@@ -9,6 +15,7 @@
   @media (min-width: @breakpoint-tablet) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 0 30px;
   }
 
@@ -22,16 +29,14 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  // background-color: plum;
   min-height: @line-height-enormous;
   padding: 0 20px;
   border-bottom: 1px solid @special_light-grey;
 
   @media (min-width: @breakpoint-tablet) {
     min-height: 100px;
-    // flex: none;
     border-bottom: none;
-    padding: 0 75px 0 0;
+    padding: 0;
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -50,7 +55,6 @@
   justify-content: space-between;
   align-items: center;
   width: calc(50% + 50px);
-  // background-color: beige;
 
   @media (min-width: @breakpoint-tablet) {
     width: 174px;

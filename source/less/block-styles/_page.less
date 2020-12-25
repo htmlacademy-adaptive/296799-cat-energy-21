@@ -9,11 +9,16 @@
     width: 100%;
   }
 
-  @media (min-width: @breakpoint-desktop) {
-    max-width: @desktop-viewport;
-    background: linear-gradient(to bottom, transparent 150px, @secondary-color 150px), linear-gradient(to right, transparent 50%, @basic-green 50%);
-    background-image: url("../img/cat-bg-desktop.png");
-    background-repeat: no-repeat;
-    background-position: right top;
+  // @media (min-width: @breakpoint-desktop) {
+  //   max-width: @desktop-viewport;
+  // }
+
+  &--index {
+    @media (min-width: @breakpoint-desktop) {
+      background: linear-gradient(to bottom, transparent 150px, @secondary-color 150px), linear-gradient(to right, transparent 50%, @basic-green 50%);
+      background-image: url("../img/cat-bg-desktop.png");
+      background-repeat: no-repeat;
+      background-position: right top;
+    }
   }
 }

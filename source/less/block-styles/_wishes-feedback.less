@@ -1,4 +1,7 @@
 .wishes-feedback {
+  border-top: 2px solid @basic-green;
+  padding: 15px 0 12px 45px;
+
   @media (min-width: @breakpoint-desktop) {
     grid-column: 1 / span 2;
     grid-row: 4;
@@ -10,33 +13,84 @@
     display: grid;
     grid-template-columns: 250px 250px;
     grid-template-rows: 70px 70px;
-    grid-column-gap: 120px;
-    grid-row-gap: 32px;
+    grid-column-gap: 20px;
+    grid-row-gap: 3px;
     justify-content: space-between;
-    padding: 0 250px 0 0;
+    padding: 15px 45px 0 80px;
   }
 
   @media (min-width: @breakpoint-desktop) {
     display: flex;
     justify-content: space-between;
-    grid-column-gap: 32px;
     grid-row-gap: 0;
-    padding: 0;
+    max-width: @desktop-viewport;
+    margin: 0 auto;
+    // padding: 0 110px;
+    padding: 40px 125px 7px 120px;
   }
 }
 
 .wishes-feedback__leader {
+  display: inline-block;
   font-size: @font-size-large;
+  width: auto;
+  margin: 0 0 0 -45px;
+  padding: 0 20px;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-huge;
+    margin: 0 0 0 -20px;
+    padding: 0 40px 10px 40px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    // margin: 0 0 0 25px;
+    margin-left: calc(50% - 670px);
   }
 }
 
 .wishes-feedback__field-description {
+  position: relative;
   text-transform: uppercase;
+  line-height: 27px;
+  color: @special_dark-grey-secondary;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -46px;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 0 0 1px @special_light-grey-3;
+
+    @media (min-width: @breakpoint-tablet) {
+      top: -9px;
+      left: -55px;
+      width: 38px;
+      height: 38px;
+    }
+  }
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-big;
+    line-height: 1;
   }
+}
+
+.wishes-feedback__field:hover + .wishes-feedback__field-description::before,
+.wishes-feedback__field:focus + .wishes-feedback__field-description::before {
+  box-shadow: 0 0 0 1px #bababa;
+  transition: 0.4s;
+}
+
+.wishes-feedback__field:checked + .wishes-feedback__field-description::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wishes-feedback__field:disabled + .wishes-feedback__field-description::before {
+  opacity: 0.3;
 }

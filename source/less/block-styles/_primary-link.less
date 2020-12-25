@@ -1,6 +1,5 @@
 .primary-link {
   .primary-link-mixin();
-  // outline: 2px dotted white;
 
   @media (min-width: @breakpoint-tablet) {
     .primary-link-mixin(@font-size-big, @line-height-large, auto);
@@ -11,7 +10,13 @@
   .primary-link-mixin(@font-size-base);
 
   @media (min-width: @breakpoint-tablet) {
-    .primary-link-mixin(@font-size-big, @line-height-large, 50%);
+    .primary-link-mixin(@font-size-big, @line-height-large, 40%);
+    margin: 0 60px 0 0;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    .primary-link-mixin(@font-size-big, @line-height-large, 47%);
+    margin: 0 70px 0 0;
   }
 }
 
