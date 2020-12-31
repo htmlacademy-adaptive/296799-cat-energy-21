@@ -1,49 +1,105 @@
 .card {
   box-sizing: border-box;
-  background-color: lime;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 320px;
-  min-height: 190px;
+  min-height: 188px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 10px 20px;
 
   @media (min-width: @breakpoint-tablet) {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
     width: 324px;
     min-height: 430px;
     margin: 0;
-    padding: 40px;
+    padding: 8px 40px 0;
     border-top: none;
+    background-image: linear-gradient(to top, @basic-gray 430px, transparent 430px);
   }
 
   @media (min-width: @breakpoint-desktop) {
+    padding: 0 40px 0;
     width: 245px;
   }
 }
 
-.card__pic {
-  float: left;
+.card__data {
+  width: 140px;
+  margin: 0 0 auto 0;
 
   @media (min-width: @breakpoint-tablet) {
-    float: none;
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+}
+
+.card__pic-container {
+  width: 140px;
+  min-height: 112px;
+
+  @media (min-width: @breakpoint-tablet) {
+    width: 168px;
+    min-height: 210px;
+    margin: 0 auto;
+  }
+}
+
+.card__pic {
+  @media (min-width: @breakpoint-tablet) {
+    width: 168px;
+    height: auto;
   }
 }
 
 .card__title {
   color: @special_dark-grey-secondary;
+  font-size: @font-size-base;
   font-weight: @font-weight-regular;
   text-transform: uppercase;
+  padding: 0 60px 0 0;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-big;
     text-align: center;
+    margin: 25px 0 15px 0;
+    padding: 0 55px;
+  }
+
+  @media (min-width: @breakpoint-desktop) {
+    margin: 30px 0 15px 0;
+    padding: 0 5px;
   }
 }
 
 .card__description {
   font-family: @secondary-font-family;
-  font-size: @font-size-small;
+  font-size: @font-size-tiny;
   color: @special_dark-grey;
+  line-height: 1;
+  width: 100%;
+  border-collapse: collapse;
 
   @media (min-width: @breakpoint-tablet) {
     font-size: @font-size-base;
   }
+}
+
+.card__description td {
+  @media (min-width: @breakpoint-tablet) {
+    line-height: 29px;
+    border-bottom: 1px solid @special_light-grey-3;
+  }
+}
+
+.card__parameter-value {
+  text-align: right;
+  width: 100%;
+}
+
+.card__purchase-link {
+  margin: 0 auto;
 }
