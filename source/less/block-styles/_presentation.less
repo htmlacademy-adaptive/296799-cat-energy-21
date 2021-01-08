@@ -60,7 +60,7 @@
   }
 
   @media (min-width: @breakpoint-desktop) {
-    padding: 0 10px 0 70px;
+    padding: 0 18px 0 60px;
   }
 }
 
@@ -118,4 +118,20 @@
 .presentation__pic {
   width: 677px;
   height: auto;
+}
+
+.presentation__pic-container {
+  width: 311px;
+  min-height: 233px;
+  margin: 10px 0 0 0;
+
+  @media (min-width: @breakpoint-tablet) {
+    margin: 0;
+    width: 677px;
+    min-height: 520px;
+  }
+}
+
+.presentation__pic-container--hidden {
+  display: none;
 }
