@@ -23,7 +23,7 @@
     box-sizing: border-box;
     width: 570px;
     min-height: 200px;
-    padding: 50px 75px;
+    padding: 50px 80px 45px 75px;
     z-index: 2;
   }
 }
@@ -80,13 +80,25 @@
   background-position: 50% 50%;
   background-size: cover;
 
-  @media (min-width: @breakpoint-tablet) {
-    min-height: 400px;
-    background-image: url("../img/location-tablet.png");
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location@2x.png");
   }
 
   @media (min-width: @breakpoint-tablet) {
+    min-height: 400px;
+    background-image: url("../img/location-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @breakpoint-desktop) {
     background-image: url("../img/location-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-desktop@2x.png");
+    }
   }
 }
 
