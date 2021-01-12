@@ -142,12 +142,21 @@
   background-repeat: no-repeat;
   background-position: center 27%;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift.svg"), url("../img/gift-photo-mobile@2x.png");
+    background-size: auto, 100%;
+  }
+
   @media (min-width: @breakpoint-tablet) {
     text-align: left;
     min-height: 200px;
     padding: 70px 120px 60px 60%;
     background-image: url("../img/gift.svg"), url("../img/gift-photo-tablet.png");
     background-position: 12% center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift.svg"), url("../img/gift-photo-tablet@2x.png");
+    }
   }
 
   @media (min-width: @breakpoint-desktop) {
@@ -157,6 +166,10 @@
     padding: 185px 40px 40px 40px;
     background-image: url("../img/gift.svg"), url("../img/gift-photo-desktop.png");
     background-position: center 28%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift.svg"), url("../img/gift-photo-desktop@2x.png");
+    }
   }
 }
 
