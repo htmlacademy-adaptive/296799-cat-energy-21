@@ -1,0 +1,17 @@
+.popup {
+  &--closed {
+    display: none;
+
+    @media (min-width: @breakpoint-tablet) {
+      display: flex;
+    }
+  }
+
+  &--showed {
+    display: block;
+  }
+
+  @media (min-width: @breakpoint-tablet) {
+    display: flex;
+  }
+}

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи Каталог продукции</title>
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -23,10 +24,10 @@
             </picture>
             <img class="header__logo-text" src="img/text-logo.svg" width="101" height="18" alt="Логотип-наименование">
           </a>
-          <button class="header__menu-toggle-button header__menu-toggle-button--cross"
+          <button class="header__menu-toggle-button header__menu-toggle-button--burger"
             aria-label="Кнопка раскрытия-закрытия меню"></button>
         </div> <!-- конец контейнера верхней части шапки -->
-        <nav class="header__navigation navigation popup">
+        <nav class="header__navigation navigation popup popup--closed">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="index.html">Главная</a>
@@ -391,7 +392,7 @@
         <!-- конец контейнeра с картой -->
       </section>
       <div class="footer__nonstrech-footer-container">
-        <a class="footer__logo-link">
+        <a class="footer__logo-link" href="index.html">
           <img class="footer__logo-text" src="img/text-logo.svg" width="128" height="24" alt="Логотип-наименование">
         </a>
         <div class="footer__social">
@@ -434,7 +435,7 @@
       <!-- конец центровщика секций, которые не должны тянуться на ширину экрана -->
     </footer>
   </div> <!-- конец центровщика страницы -->
-
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
