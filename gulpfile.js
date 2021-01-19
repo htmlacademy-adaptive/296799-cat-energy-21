@@ -59,7 +59,7 @@ const images = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 2}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
@@ -80,7 +80,14 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.svg")
+  return gulp.src("source/sprite-icons/*.svg")
+    // .pipe(imagemin(imagemin.svgo()))
+    .pipe(imagemin([
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({optimizationLevel: 2}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/sprite-icons"))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
