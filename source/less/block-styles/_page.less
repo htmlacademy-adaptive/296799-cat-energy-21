@@ -11,10 +11,9 @@
 
   &--index {
     @media (min-width: @breakpoint-desktop) {
-      background: linear-gradient(to bottom, transparent 150px, @secondary-color 150px), linear-gradient(to right, transparent 50%, @basic-green 50%);
-      background-image: url("../img/cat-bg-desktop.png");
+      background-image: url("../img/cat-bg-desktop.png"), linear-gradient(to bottom, transparent 694px, @secondary-color 694px), linear-gradient(to right, transparent 50%, @basic-bg-green 50% 720px, transparent 720px 100%);
       background-repeat: no-repeat;
-      background-position: right top;
+      background-position: calc(50% + 360px) top;
     }
   }
 }
